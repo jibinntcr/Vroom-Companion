@@ -36,8 +36,8 @@ class Person {
   // Method to sell a car and remove it from the list of owned cars.
   void sellCar(Car car) {
     if (ownedCars.contains(car)) {
+      moneyLeft += car.price; // Update moneyLeft when selling a car.
       ownedCars.remove(car);
-      moneyLeft += car.price;
       print("$name sold the ${car.name} for \$${car.price.toStringAsFixed(2)}");
     } else {
       print("$name does not own ${car.name}");
@@ -59,7 +59,7 @@ void main() {
   person2.buyCar(car2);
   person1.sellCar(car2);
 
-  // Display the final state of each person's owned cars and money left.
+  // Display the final state of ownership and money left.
   print("\nFinal state of ownership:");
   print("${person1.name} owns: ${person1.ownedCars.map((car) => car.name).join(', ')}");
   print("${person2.name} owns: ${person2.ownedCars.map((car) => car.name).join(', ')}");

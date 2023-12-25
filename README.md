@@ -1,5 +1,4 @@
 # Vroom-Companion
-
 ## Car Class
 The `Car` class represents a car and has the following properties and methods:
 - `name`: Represents the name of the car.
